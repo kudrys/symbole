@@ -16,10 +16,10 @@ void mapa::create_map() {
 }
 
 void mapa::draw() {
-    for(int i=1; i<y+1; i++) {
+    for(int i=0; i<y; i++) {
         cout<<"\n";
-        for(int j=1; j<x+1; j++) {
-            cout<<tab[j][i];
+        for(int j=0; j<x; j++) {
+            cout<<tab[i][j];
         }
     }
 }
