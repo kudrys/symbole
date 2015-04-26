@@ -1,5 +1,6 @@
 #include <iostream>
-using namespaces std;
+#include <mapa.h>
+using namespace std;
 
 
 int main(){
@@ -9,4 +10,7 @@ int main(){
     mapa skarbow;
     skarbow.x=x;
     skarbow.y=y;
+
+    skarbow.create_map();
+    skarbow.draw();
 }

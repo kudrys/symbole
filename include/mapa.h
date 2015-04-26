@@ -8,6 +8,9 @@ class mapa
         mapa();
         int x;
         int y;
+        char **tab;
+        void create_map();
+        void draw();
     protected:
     private:
 };
