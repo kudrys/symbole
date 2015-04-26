@@ -2,10 +2,6 @@
 
 mapa::mapa()
 {
-    //ctor
+
 }
 
-mapa::~mapa()
-{
-    //dtor
-}

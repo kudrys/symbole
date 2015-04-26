@@ -6,7 +6,8 @@ class mapa
 {
     public:
         mapa();
-        virtual ~mapa();
+        int x;
+        int y;
     protected:
     private:
 };
