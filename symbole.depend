@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1430049558 source:d:\users\rychu\documents\rych2\symbole\main.cpp
+1430050360 source:d:\users\rychu\documents\rych2\symbole\main.cpp
 	<iostream>
 	<mapa.h>
 
-1430049507 d:\users\rychu\documents\rych2\symbole\include\mapa.h
+1430050314 d:\users\rychu\documents\rych2\symbole\include\mapa.h
 
-1430049269 source:d:\users\rychu\documents\rych2\symbole\src\mapa.cpp
+1430050300 source:d:\users\rychu\documents\rych2\symbole\src\mapa.cpp
 	"mapa.h"
+	<iostream>
 
 1430046277 source:d:\users\rychu\documents\rych2\symbole\src\symbol.cpp
 	"symbol.h"

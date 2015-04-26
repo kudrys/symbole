@@ -13,4 +13,7 @@ int main(){
 
     skarbow.create_map();
     skarbow.draw();
+
+    skarbow.load();
+    skarbow.draw();
 }

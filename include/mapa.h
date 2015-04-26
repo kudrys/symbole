@@ -11,6 +11,7 @@ class mapa
         char **tab;
         void create_map();
         void draw();
+        void load();
     protected:
     private:
 };

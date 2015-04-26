@@ -15,7 +15,6 @@ void mapa::create_map() {
     }
 }
 
-
 void mapa::draw() {
     for(int i=1; i<y+1; i++) {
         cout<<"\n";
@@ -24,3 +23,15 @@ void mapa::draw() {
         }
     }
 }
+
+void mapa::load() {
+    char c[1000];
+    for(int i=0; i<y; i++) {
+            cin>> tab[i];
+//        for(int j=0; j<x; j++){
+//            tab[j][i]=c;
+//        }
+
+    }
+}
+
