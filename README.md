@@ -7,7 +7,7 @@ symbols
 - rozgryźć sensowne hashe
 
 
-** rysiek todo**
+**rysiek todo**
 symbol.draw();
 symbol.create_tab(); -przejrzeć
 dodac ilosc do konstruktora symbolu funkcja +1
