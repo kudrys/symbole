@@ -11,7 +11,7 @@ int main(){
     skarbow.y=y;
 
     skarbow.create_map();
-    skarbow.draw();
+    //skarbow.draw();
 
     skarbow.load();
     skarbow.draw();
