@@ -1,8 +1,11 @@
-# worm
-worm
-
-http://www.cplusplus.com/reference/cstdlib/atoi/
+# symbols
+symbols
 
 **todo:
-- wczytywanie znaków (koniec na koniec)
-- naprawić grzyby
+- segmentation fault po  create_map (3, 8)
+- klasa aplikacja 256
+
+
+** rysiek todo
+
+
