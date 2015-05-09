@@ -9,9 +9,13 @@ class symbol
         virtual ~symbol();
         int x;
         int y;
+        int counter;
         bool **tab;
         bool create_tab();
         int hasz;
+        void draw();
+        void counter_grow();
+        void funkk();
     protected:
     private:
 };
