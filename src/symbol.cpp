@@ -10,11 +10,11 @@ symbol::~symbol(){
     //dtor
 }
 
-bool symbol::create_tab(){
+char symbol::create_tab(){
 
-    tab = new bool* [x+2];
+    tab = new char* [x+2];
     for (int i = 0; i < x+2; i++) {
-        tab[i] = new bool [y+2];
+        tab[i] = new char [y+2];
     }
 }
 
@@ -29,6 +29,5 @@ void symbol::draw(){
 
 void symbol::counter_grow(){
     counter+=counter+1;
-
 }
 

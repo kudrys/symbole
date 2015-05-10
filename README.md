@@ -11,6 +11,10 @@ symbols
 symbol.draw();
 symbol.create_tab(); -przejrzeć
 dodac ilosc do konstruktora symbolu funkcja +1
+---
+wstawic symbol do helptab
+
+
 
 **zbyszek todo**
 segmentation fault naprawić

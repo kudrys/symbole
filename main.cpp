@@ -15,5 +15,8 @@ int main(){
 
     skarbow.load();
     skarbow.draw();
+    skarbow.flood(0,0);
+    cout<<"\n";
+    skarbow.draw();
 }
 
