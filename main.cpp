@@ -12,11 +12,14 @@ int main(){
 
     skarbow.create_map();
     //skarbow.draw();
-
+    skarbow.load_helptab();
     skarbow.load();
     skarbow.draw();
     skarbow.flood(0,0);
     cout<<"\n";
-    skarbow.draw();
+    cout<<"keke";
+    //skarbow.draw();
+
+    skarbow.draw_help();
 }
 

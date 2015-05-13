@@ -34,6 +34,28 @@ void mapa::load() {
     }
 }
 
+void mapa::load_helptab() {
+    //char c[1000];
+    for(int i=0; i<50;i++){
+            //cout<<"kek";
+    for(int j=0; j<50; j++) {
+            helptab[i][j]='*';
+//        for(int j=0; j<x; j++){
+//            tab[j][i]=c;
+//        }
+    }
+    }
+}
+
+void mapa::draw_help() {
+    for(int i=0; i<50; i++) {
+        cout<<"\n";
+        for(int j=0; j<50; j++) {
+            cout<<helptab[i][j];
+        }
+    }
+}
+
 void mapa::flood(int floodX,int floodY){
 
     if(floodX<0||floodY<0||floodX>x||floodY>y){
@@ -54,14 +76,19 @@ void mapa::flood(int floodX,int floodY){
 }
 
 void mapa::one(int ox,int oy){
+
     if(ox<0||oy<0||ox>x||oy>y){
     }else{
+
         if(tab[oy][ox]=='1'){
+            helptab[25+oy][25+ox]='1';
+            //cout<<"kloc";
+            tab[oy][ox];
             tab[oy][ox]='0';
-            one(ox,oy-1);
-            one(ox,oy+1);
-            one(ox+1,oy);
-            one(ox-1,oy);
+            one(ox,oy-1); //up
+            one(ox,oy+1); //down
+            one(ox+1,oy); //right
+            one(ox-1,oy); //left
         }
     }
 }
