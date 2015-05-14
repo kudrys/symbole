@@ -35,15 +35,11 @@ void mapa::load() {
 }
 
 void mapa::load_helptab() {
-    //char c[1000];
     for(int i=0; i<50;i++){
-            //cout<<"kek";
-    for(int j=0; j<50; j++) {
+        for(int j=0; j<50; j++) {
             helptab[i][j]='*';
-//        for(int j=0; j<x; j++){
-//            tab[j][i]=c;
-//        }
-    }
+
+        }
     }
 }
 
@@ -56,11 +52,21 @@ void mapa::draw_help() {
     }
 }
 
+void mapa::clear_help(int x,int y){
+    if(helptab[y][x]=='1'){
+        helptab[y][x]='*';
+        clear_help(x,y-1);
+        clear_help(x,y+1);
+        clear_help(x+1,y);
+        clear_help(x-1,y);
+    }
+}
+
 void mapa::flood(int floodX,int floodY){
 
     if(floodX<0||floodY<0||floodX>x||floodY>y){
     }else{
-        draw();
+        //draw();
         if(tab[floodY][floodX]=='0'){
             tab[floodY][floodX]='.';
             flood(floodX,floodY-1); //up
@@ -69,22 +75,27 @@ void mapa::flood(int floodX,int floodY){
             flood(floodX-1,floodY); //left
         }else{
             if(tab[floodY][floodX]=='1'){
-                one(floodX,floodY);
+                extract_symbol(floodX,floodY);
             }
         }
     }
 }
 
-void mapa::one(int ox,int oy){
+void mapa::extract_symbol(int ox,int oy){
+
+    one(ox,oy);
+    draw_help();
+    clear_help(24,24);
+}
+
+void mapa::one(int ox, int oy){
 
     if(ox<0||oy<0||ox>x||oy>y){
     }else{
-
         if(tab[oy][ox]=='1'){
-            helptab[25+oy][25+ox]='1';
-            //cout<<"kloc";
-            tab[oy][ox];
             tab[oy][ox]='0';
+            helptab[24+oy][24+ox]='1';
+
             one(ox,oy-1); //up
             one(ox,oy+1); //down
             one(ox+1,oy); //right
@@ -92,6 +103,9 @@ void mapa::one(int ox,int oy){
         }
     }
 }
+
+
+
 
 
 /*

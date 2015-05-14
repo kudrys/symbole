@@ -14,7 +14,9 @@ class mapa
         void draw_help();
         void load();
         void load_helptab();
+        void clear_help(int,int);
         void flood(int,int);
+        void extract_symbol(int,int);
         void one(int,int);
         void funkk();
     protected:

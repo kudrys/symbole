@@ -15,9 +15,9 @@ int main(){
     skarbow.load_helptab();
     skarbow.load();
     skarbow.draw();
+    //skarbow.flood(0,0);
     skarbow.flood(0,0);
     cout<<"\n";
-    cout<<"keke";
     //skarbow.draw();
 
     skarbow.draw_help();
