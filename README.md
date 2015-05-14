@@ -13,6 +13,9 @@ symbol.create_tab(); -przejrzeć
 dodac ilosc do konstruktora symbolu funkcja +1
 ---
 wstawic symbol do helptab
+---
+jakas funkcja do liczenia rozmiarow
+
 
 
 
