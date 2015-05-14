@@ -20,6 +20,6 @@ int main(){
     cout<<"\n";
     //skarbow.draw();
 
-    skarbow.draw_help();
+    skarbow.h.draw();
 }
 

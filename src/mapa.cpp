@@ -1,9 +1,10 @@
 #include "mapa.h"
+#include "help.h"
 #include <iostream>
 using namespace std;
 
 mapa::mapa(){
-
+    h = new help;
 }
 
 void mapa::create_map() {
@@ -43,25 +44,6 @@ void mapa::load_helptab() {
     }
 }
 
-void mapa::draw_help() {
-    for(int i=0; i<50; i++) {
-        cout<<"\n";
-        for(int j=0; j<50; j++) {
-            cout<<helptab[i][j];
-        }
-    }
-}
-
-void mapa::clear_help(int x,int y){
-    if(helptab[y][x]=='1'){
-        helptab[y][x]='*';
-        clear_help(x,y-1);
-        clear_help(x,y+1);
-        clear_help(x+1,y);
-        clear_help(x-1,y);
-    }
-}
-
 void mapa::flood(int floodX,int floodY){
 
     if(floodX<0||floodY<0||floodX>x||floodY>y){
@@ -94,7 +76,7 @@ void mapa::one(int ox, int oy){
     }else{
         if(tab[oy][ox]=='1'){
             tab[oy][ox]='0';
-            helptab[24+oy][24+ox]='1';
+            helptab[24][24]='1';
 
             one(ox,oy-1); //up
             one(ox,oy+1); //down
