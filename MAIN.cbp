@@ -33,9 +33,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/help.h" />
 		<Unit filename="include/mapa.h" />
 		<Unit filename="include/symbol.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/help.cpp" />
 		<Unit filename="src/mapa.cpp" />
 		<Unit filename="src/symbol.cpp" />
 		<Extensions>

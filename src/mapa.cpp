@@ -68,7 +68,7 @@ void mapa::extract_symbol(int ox,int oy){
     h.set_default(ox,oy);
 
     one(ox,oy);
-    h.draw();
+    h.draw_box();
 
     draw();
     int b;
@@ -93,7 +93,6 @@ void mapa::one(int ox, int oy){
 
             tab[oy][ox]='0';
             h.helptab[oy-h.y+24][ox-h.x+24]='1';
-h.draw_box();
             one(ox,oy-1); //up
             one(ox,oy+1); //down
             one(ox+1,oy); //right

@@ -2,28 +2,33 @@
 symbols
 
 **todo:**
-- segmentation fault po  create_map (3, 8)
-- klasa aplikacja 256
+- segmentation fault po  create_map (3, 8), done
+- klasa aplikacja 256, done
 - rozgryźć sensowne hashe
 
 
 **rysiek todo**
-symbol.draw();
-symbol.create_tab(); -przejrzeć
-dodac ilosc do konstruktora symbolu funkcja +1
+symbol.draw();, done
+symbol.create_tab(); -przejrzeć, done
+dodac ilosc do konstruktora symbolu funkcja +1, done
 ---
-wstawic symbol do helptab
+wstawic symbol do helptab, done
 ---
 jakas funkcja do liczenia rozmiarow
+draw-box wpakowac do symbolu
+pobawic sie symbolem
 
 
 
 
 **zbyszek todo**
-segmentation fault naprawić
+segmentation fault naprawić, done
 
 
 
+
+
+-----------------------------------------------------------------------
 **TREŚĆ**
 
 Powtarzające się symbole
