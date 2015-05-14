@@ -65,8 +65,14 @@ void mapa::flood(int floodX,int floodY){
 
 void mapa::extract_symbol(int ox,int oy){
 
+    h.set_default(ox,oy);
+
     one(ox,oy);
     h.draw();
+
+    draw();
+    int b;
+    cin>>b;
     h.clearr(24,24);
 }
 
@@ -75,9 +81,19 @@ void mapa::one(int ox, int oy){
     if(ox<0||oy<0||ox>x||oy>y){
     }else{
         if(tab[oy][ox]=='1'){
-            tab[oy][ox]='0';
-            h.helptab[24][24]='1';
 
+            if(h.highX<ox)     //ustawia highX i highY
+                h.highX=ox;
+            if(h.lowX>ox)
+                h.lowX=ox;
+            if(h.highY<oy)
+                h.highY=oy;
+            if(h.lowY>oy)
+                h.lowY=oy;
+
+            tab[oy][ox]='0';
+            h.helptab[oy-h.y+24][ox-h.x+24]='1';
+h.draw_box();
             one(ox,oy-1); //up
             one(ox,oy+1); //down
             one(ox+1,oy); //right
@@ -85,10 +101,6 @@ void mapa::one(int ox, int oy){
         }
     }
 }
-
-
-
-
 
 /*
 
