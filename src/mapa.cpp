@@ -4,7 +4,7 @@
 using namespace std;
 
 mapa::mapa(){
-    h = new help;
+   // h = new help;
 }
 
 void mapa::create_map() {
@@ -38,7 +38,7 @@ void mapa::load() {
 void mapa::load_helptab() {
     for(int i=0; i<50;i++){
         for(int j=0; j<50; j++) {
-            helptab[i][j]='*';
+            h.helptab[i][j]='*';
 
         }
     }
@@ -66,8 +66,8 @@ void mapa::flood(int floodX,int floodY){
 void mapa::extract_symbol(int ox,int oy){
 
     one(ox,oy);
-    draw_help();
-    clear_help(24,24);
+    h.draw();
+    h.clearr(24,24);
 }
 
 void mapa::one(int ox, int oy){
@@ -76,7 +76,7 @@ void mapa::one(int ox, int oy){
     }else{
         if(tab[oy][ox]=='1'){
             tab[oy][ox]='0';
-            helptab[24][24]='1';
+            h.helptab[24][24]='1';
 
             one(ox,oy-1); //up
             one(ox,oy+1); //down

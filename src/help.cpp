@@ -8,7 +8,7 @@ help::help()
 }
 
 
-void mapa::draw() {
+void help::draw() {
     for(int i=0; i<50; i++) {
         cout<<"\n";
         for(int j=0; j<50; j++) {
@@ -17,12 +17,12 @@ void mapa::draw() {
     }
 }
 
-void mapa::clearr(int x,int y){
+void help::clearr(int x,int y){
     if(helptab[y][x]=='1'){
         helptab[y][x]='*';
-        clear_help(x,y-1);
-        clear_help(x,y+1);
-        clear_help(x+1,y);
-        clear_help(x-1,y);
+        clearr(x,y-1);
+        clearr(x,y+1);
+        clearr(x+1,y);
+        clearr(x-1,y);
     }
 }
