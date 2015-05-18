@@ -4,7 +4,8 @@ using namespace std;
 
 help::help()
 {
-
+    wysokosc=0;
+    szerokosc=0;
 }
 
 void help::draw() {
@@ -28,9 +29,22 @@ void help::draw_box(){
             cout<<helptab[i][j];
         }
     }
-    cout<<"\n----";
-
+    cout<<"\n----\n";
+    what_symbol_size();
+    cout<<"size: "<<wysokosc<<","<<szerokosc;
 }
+
+void help::what_symbol_size()
+{
+    int hx=highX-x+24;
+    int hy=highY-y+24;
+    int lx=lowX-x+24;
+    int ly=lowY-y+24;
+
+    wysokosc=hy+1-ly;
+    szerokosc=hx+1-lx;
+}
+
 
 void help::clearr(int cx,int cy){
     if(helptab[cy][cx]=='1'){
@@ -42,7 +56,7 @@ void help::clearr(int cx,int cy){
     }
 }
 
-void help::set_default(int sx,int sy){
+void help::set_default(int sx,int sy){ //przekazuje x-y napotkanej "jedynki"
 
     x=sx;
     y=sy;
@@ -51,4 +65,5 @@ void help::set_default(int sx,int sy){
     lowX=x;
     lowY=y;
 }
+
 

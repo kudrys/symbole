@@ -18,7 +18,11 @@ class help
         void set_default(int, int);
         void draw();
         void draw_box();
+        int wysokosc;
+        int szerokosc;
+        void what_symbol_size();
         void clearr(int,int);
+        void funkk();
     protected:
     private:
 };
