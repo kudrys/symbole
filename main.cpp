@@ -7,6 +7,7 @@ int main(){
     cin>> x;
     cin>> y;
     mapa skarbow;
+    symbol s;
     skarbow.x=x;
     skarbow.y=y;
 
@@ -20,6 +21,9 @@ int main(){
     cout<<"\n";
     //skarbow.draw();
 
-    skarbow.h.draw();
+    //skarbow.h.draw();
+
+    cout<<"symbol:\n";
+    skarbow.tab_hasz[0].draw();
 }
 

@@ -2,17 +2,17 @@
 symbols
 
 **todo:**
-- segmentation fault po  create_map (3, 8), done
-- klasa aplikacja 256, done
+- segmentation fault po  create_map (3, 8), =done=
+- klasa aplikacja 256, =done=
 - rozgryźć sensowne hashe
 
 
 **rysiek todo**
-symbol.draw();, done
-symbol.create_tab(); -przejrzeć, done
-dodac ilosc do konstruktora symbolu funkcja +1, done
+symbol.draw();, =done=
+symbol.create_tab(); -przejrzeć, =done=
+dodac ilosc do konstruktora symbolu funkcja +1, =done=
 ---
-wstawic symbol do helptab, done
+wstawic symbol do helptab, =done=
 ---
 jakas funkcja do liczenia rozmiarow
 draw-box wpakowac do symbolu

@@ -1,4 +1,5 @@
 #include "help.h"
+#include "symbol.h"
 #include <iostream>
 using namespace std;
 
@@ -17,7 +18,7 @@ void help::draw() {
     }
 }
 
-void help::draw_box(){
+void help::draw_box_and_size(){
     cout<<"\n----";
     int hx=highX-x+24;
     int hy=highY-y+24;
@@ -32,6 +33,18 @@ void help::draw_box(){
     cout<<"\n----\n";
     what_symbol_size();
     cout<<"size: "<<wysokosc<<","<<szerokosc;
+}
+
+void help::draw_box_to_symbol(symbol* s){
+    int hx=highX-x+24;
+    int hy=highY-y+24;
+    int lx=lowX-x+24;
+    int ly=lowY-y+24;
+    for(int i=0; i<=s->x; i++) {
+        for(int j=0; j<=s->y; j++) {
+        s->tab[i][j]=helptab[ly+i][lx+j];
+        }
+    }
 }
 
 void help::what_symbol_size()

@@ -5,7 +5,8 @@
 class symbol
 {
     public:
-        symbol();
+        symbol(){};
+        symbol(int,int);
         virtual ~symbol();
         int x;
         int y;

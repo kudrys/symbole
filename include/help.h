@@ -1,3 +1,4 @@
+#include "symbol.h"
 #ifndef HELP_H
 #define HELP_H
 
@@ -8,7 +9,8 @@ class help
         help();
         int x;
         int y;
-
+        int wysokosc;
+        int szerokosc;
         int highX; //rozmiary pojedynczego symbolu
         int lowX;
         int highY;
@@ -17,9 +19,8 @@ class help
 
         void set_default(int, int);
         void draw();
-        void draw_box();
-        int wysokosc;
-        int szerokosc;
+        void draw_box_and_size();
+        void draw_box_to_symbol(symbol*);
         void what_symbol_size();
         void clearr(int,int);
         void funkk();

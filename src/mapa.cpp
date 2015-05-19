@@ -1,5 +1,6 @@
 #include "mapa.h"
 #include "help.h"
+#include "symbol.h"
 #include <iostream>
 using namespace std;
 
@@ -68,7 +69,15 @@ void mapa::extract_symbol(int ox,int oy){
     h.set_default(ox,oy);
 
     one(ox,oy);
-    h.draw_box();
+    //h.draw_box_and_size();
+    h.what_symbol_size();
+
+    tab_hasz[0]= symbol(h.szerokosc, h.wysokosc);
+
+    h.draw_box_to_symbol(&tab_hasz[0]);
+    cout<<"---\n";
+    tab_hasz[0].draw();
+    cout<<"---\n";
 
     draw();
     int b;
