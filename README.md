@@ -14,9 +14,12 @@ dodac ilosc do konstruktora symbolu funkcja +1, =done=
 ---
 wstawic symbol do helptab, =done=
 ---
-jakas funkcja do liczenia rozmiarow
-draw-box wpakowac do symbolu
-pobawic sie symbolem
+jakas funkcja do liczenia rozmiarow =done=
+draw-box wpakowac do symbolu =done=
+pobawic sie symbolem =done=
+---
+potestowac, przejrzec, ogarnac haszowanie i xor, testy.
+przy wypisywaniu dodatkowe zera ogarnac (clear?)
 
 
 
