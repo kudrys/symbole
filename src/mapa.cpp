@@ -5,7 +5,7 @@
 using namespace std;
 
 mapa::mapa(){
-   // h = new help;
+  hasz_size=0;
 }
 
 void mapa::create_map() {
@@ -64,19 +64,33 @@ void mapa::flood(int floodX,int floodY){
     }
 }
 
+int mapa::insert_hasz(int hasz){
+
+   for(int i=0;i<hasz_size;i++){
+        if(hasz==tab_hasz[i].hasz){
+            tab_hasz[i].counter++;
+            return 0;  //zwraca 0 gdy nie powiekszylismy tablicy
+        }
+    }
+    tab_hasz[hasz_size]= symbol(h.szerokosc, h.wysokosc);
+    tab_hasz[hasz_size].hasz=hasz;
+    hasz_size++;
+    return 1;   //zwraca 1 gdy znajdzie nowego hasza
+}
+
 void mapa::extract_symbol(int ox,int oy){
 
     h.set_default(ox,oy);
-
     one(ox,oy);
-    //h.draw_box_and_size();
     h.what_symbol_size();
 
-    tab_hasz[0]= symbol(h.szerokosc, h.wysokosc);
+    int hasz=h.hash_function();
+    insert_hasz(hasz);
 
     h.draw_box_to_symbol(&tab_hasz[0]);
     cout<<"---\n";
     tab_hasz[0].draw();
+    cout<<" hasz:"<<h.hash_function();
     cout<<"---\n";
 
     draw();
@@ -85,7 +99,7 @@ void mapa::extract_symbol(int ox,int oy){
     h.clearr(24,24);
 }
 
-void mapa::one(int ox, int oy){
+void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
 
     if(ox<0||oy<0||ox>x||oy>y){
     }else{

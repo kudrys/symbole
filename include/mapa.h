@@ -9,6 +9,7 @@ class mapa
         mapa();
         int x;
         int y;
+        int hasz_size;
         symbol tab_hasz[20];
         char **tab;
         help h;
@@ -17,6 +18,7 @@ class mapa
         void load();
         void load_helptab();
         void flood(int,int);
+        int insert_hasz(int);
         void extract_symbol(int,int);
         void one(int,int);
         void funkk();

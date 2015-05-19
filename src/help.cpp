@@ -58,10 +58,37 @@ void help::what_symbol_size()
     szerokosc=hx+1-lx;
 }
 
+int help::hash_function(){
+
+    int hx=highX-x+24;
+    int hy=highY-y+24;
+    int lx=lowX-x+24;
+    int ly=lowY-y+24;
+    int temp=0;
+    int temp2=0;
+    int counter=0;
+
+    for(int i=ly; i<=hy; i++) {
+        for(int j=lx; j<=hx; j++) {
+            temp=temp<<1;  //przesuniecie bitowe
+            if(helptab[i][j]=='1'){
+                temp+=1;
+            }
+            counter++;
+            if(counter==17){
+                temp2=temp^temp2;
+                temp=0;
+                counter=0;
+            }
+        }
+    }
+    temp2=temp^temp2;  //przypadek gdy counter nie rowny na koncu 0
+    return temp2;
+}
 
 void help::clearr(int cx,int cy){
     if(helptab[cy][cx]=='1'){
-        helptab[cy][cx]='*';
+        helptab[cy][cx]='0';
         clearr(cx,cy-1);
         clearr(cx,cy+1);
         clearr(cx+1,cy);

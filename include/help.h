@@ -22,6 +22,7 @@ class help
         void draw_box_and_size();
         void draw_box_to_symbol(symbol*);
         void what_symbol_size();
+        int hash_function();
         void clearr(int,int);
         void funkk();
     protected:
