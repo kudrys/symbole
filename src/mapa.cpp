@@ -39,7 +39,7 @@ void mapa::load() {
 void mapa::load_helptab() {
     for(int i=0; i<50;i++){
         for(int j=0; j<50; j++) {
-            h.helptab[i][j]='*';
+            h.helptab[i][j]='0';
 
         }
     }
