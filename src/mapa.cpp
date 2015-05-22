@@ -64,7 +64,7 @@ void mapa::flood(int floodX,int floodY){
     }
 }
 
-int mapa::insert_hasz(int hasz){
+int mapa::insert_hasz(int hasz){                      //zle wsadza do symbolu (zawsze rysuje 3 na 3). Jak tworzy sie tab_hasz to kazde 20 symboli ma rozmiar 3na3.
 
    for(int i=0;i<hasz_size;i++){
         if(hasz==tab_hasz[i].hasz){
