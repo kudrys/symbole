@@ -86,12 +86,13 @@ void mapa::extract_symbol(int ox,int oy){
 
     int hasz=h.hash_function();
     insert_hasz(hasz);
+    cout<<"\nhasz_size:"<<hasz_size<<"\n";
 
     h.draw_box_to_symbol(&tab_hasz[0]);
-    cout<<"---\n";
+    cout<<"\n";
     tab_hasz[0].draw();
-    cout<<" hasz:"<<h.hash_function();
-    cout<<"---\n";
+    cout<<"hasz:"<<h.hash_function();
+    cout<<"\n";
 
     draw();
     int b;

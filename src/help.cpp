@@ -56,6 +56,7 @@ void help::what_symbol_size()
 
     wysokosc=hy+1-ly;
     szerokosc=hx+1-lx;
+    cout<<"\nsize: "<<wysokosc<<","<<szerokosc;
 }
 
 int help::hash_function(){

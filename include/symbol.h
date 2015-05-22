@@ -12,7 +12,7 @@ class symbol
         int y;
         int counter;
         char **tab;
-        char create_tab();
+        char create_tab(int,int);
         int hasz;
         void draw();
         void counter_grow();

@@ -6,14 +6,14 @@ symbol::symbol(int szer, int wys){
     counter =1;
     x=szer;
     y=wys;
-    create_tab();
+    create_tab(x,y);
 }
 
 symbol::~symbol(){
     //dtor
 }
 
-char symbol::create_tab(){
+char symbol::create_tab(int x,int y){
 
     tab = new char* [x+2];
     for (int i = 0; i < x+2; i++) {
@@ -22,7 +22,6 @@ char symbol::create_tab(){
 }
 
 void symbol::draw(){
-    cout<<"sie zaczyna\n";
      for(int i=0; i<y; i++) {
         cout<<"\n";
         for(int j=0; j<x; j++) {
