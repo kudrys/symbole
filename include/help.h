@@ -7,11 +7,11 @@ class help
 {
     public:
         help();
-        int x;
+        int x;   //wspolrzedne jedynki z mapy glownej
         int y;
-        int wysokosc;
-        int szerokosc;
-        int highX; //rozmiary pojedynczego symbolu
+        int wysokosc;   //wysokosz symbolu
+        int szerokosc;  //szerokosc symbolu
+        int highX; //wspolrzedne pojedynczego symbolu
         int lowX;
         int highY;
         int lowY;

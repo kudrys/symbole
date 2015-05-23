@@ -64,11 +64,11 @@ void mapa::flood(int floodX,int floodY){
     }
 }
 
-int mapa::insert_hasz(int hasz){                      //zle wsadza do symbolu (zawsze rysuje 3 na 3). Jak tworzy sie tab_hasz to kazde 20 symboli ma rozmiar 3na3.
+int mapa::insert_hasz(int hasz){                      //zle wsadza do symbolu (zawsze rysuje 2 na 3). Jak tworzy sie tab_hasz to kazde 20 symboli ma rozmiar 3na3.
 
    for(int i=0;i<hasz_size;i++){
         if(hasz==tab_hasz[i].hasz){
-            tab_hasz[i].counter++;
+            tab_hasz[i].counter_grow();
             return 0;  //zwraca 0 gdy nie powiekszylismy tablicy
         }
     }
@@ -85,14 +85,15 @@ void mapa::extract_symbol(int ox,int oy){
     h.what_symbol_size();
 
     int hasz=h.hash_function();
-    insert_hasz(hasz);
+    cout<<"insert hasz:"<<insert_hasz(hasz)<<"\n";
     cout<<"\nhasz_size:"<<hasz_size<<"\n";
 
-    h.draw_box_to_symbol(&tab_hasz[0]);
+    h.draw_box_to_symbol(&tab_hasz[hasz_size-1]);
     cout<<"\n";
-    tab_hasz[0].draw();
+    tab_hasz[hasz_size-1].draw();
     cout<<"hasz:"<<h.hash_function();
     cout<<"\n";
+    cout<<"counter:"<<tab_hasz[hasz_size-1].counter<<"\n";
 
     draw();
     int b;

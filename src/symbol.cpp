@@ -31,6 +31,6 @@ void symbol::draw(){
 }
 
 void symbol::counter_grow(){
-    counter+=counter+1;
+    counter++;
 }
 

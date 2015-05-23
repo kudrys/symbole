@@ -3,20 +3,21 @@
 using namespace std;
 
 int main(){
-    int x, y;
+    int x, y; //rozmiary mapy
     cin>> x;
     cin>> y;
     mapa skarbow;
-    symbol s;
     skarbow.x=x;
     skarbow.y=y;
 
     skarbow.create_map();
-    //skarbow.draw();
-    skarbow.load_helptab();
-    skarbow.load();
-    skarbow.draw();
-    //skarbow.flood(0,0);
+
+    skarbow.load_helptab();  //mapa na symbol
+
+    skarbow.load();   //wypelnia mape glowna
+
+    skarbow.draw();     //rysuje mape glowna
+
     skarbow.flood(0,0);
     cout<<"\n";
     //skarbow.draw();
