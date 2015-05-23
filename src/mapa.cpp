@@ -37,8 +37,8 @@ void mapa::load() {
 }
 
 void mapa::load_helptab() {
-    for(int i=0; i<50;i++){
-        for(int j=0; j<50; j++) {
+    for(int i=0; i<256;i++){
+        for(int j=0; j<256; j++) {
             h.helptab[i][j]='0';
 
         }
@@ -103,7 +103,7 @@ void mapa::extract_symbol(int ox,int oy){
     //draw();
     //int b;
     //cin>>b;
-    h.clearr(24,24);
+    h.clearr(127,127);
 }
 
 void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
@@ -122,7 +122,7 @@ void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
                 h.lowY=oy;
 
             tab[oy][ox]='0';
-            h.helptab[oy-h.y+24][ox-h.x+24]='1';
+            h.helptab[oy-h.y+127][ox-h.x+127]='1';
             one(ox,oy-1); //up
             one(ox,oy+1); //down
             one(ox+1,oy); //right

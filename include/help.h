@@ -15,7 +15,7 @@ class help
         int lowX;
         int highY;
         int lowY;
-        char helptab[50][50];
+        char helptab[256][256];
 
         void set_default(int, int);
         void draw();
