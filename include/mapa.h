@@ -10,7 +10,7 @@ class mapa
         int x;
         int y;
         int hasz_size;
-        symbol tab_hasz[20];
+        symbol tab_hasz[100];
         char **tab;
         help h;
         void create_map();
@@ -21,6 +21,8 @@ class mapa
         int insert_hasz(int);
         void extract_symbol(int,int);
         void one(int,int);
+        void draw_the_biggest();
+        void draw_all_symbols();
         void funkk();
     protected:
     private:

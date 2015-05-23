@@ -19,6 +19,11 @@ int main(){
     skarbow.draw();     //rysuje mape glowna
 
     skarbow.flood(0,0);
+    skarbow.flood(0,0);
+
+    skarbow.draw_all_symbols();
+    skarbow.draw_the_biggest();
     cout<<"\n";
+
 }
 

@@ -88,6 +88,7 @@ int help::hash_function(){
         }
     }
     temp2=temp^temp2;  //przypadek gdy counter nie rowny na koncu 0
+    temp2=temp2^wysokosc;
     return temp2;
 }
 

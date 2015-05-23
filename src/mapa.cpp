@@ -93,16 +93,16 @@ void mapa::extract_symbol(int ox,int oy){
 
     cout<<"\n";
 
-    tab_hasz[hasz_size-1].draw();
-    h.draw_box_and_size();
+    //tab_hasz[hasz_size-1].draw();
+    //h.draw_box_and_size();
 
     cout<<"hasz:"<<h.hash_function();
     cout<<"\n";
     cout<<"counter:"<<tab_hasz[hasz_size-1].counter<<"\n";
 
-    draw();
-    int b;
-    cin>>b;
+    //draw();
+    //int b;
+    //cin>>b;
     h.clearr(24,24);
 }
 
@@ -131,16 +131,54 @@ void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
     }
 }
 
+void mapa::draw_the_biggest(){
+    int temp=0;
+    int temp_index=0;
+    for(int i=1; i<hasz_size; i++){
+        if(tab_hasz[i].counter>temp){
+            temp=tab_hasz[i].counter;
+            temp_index=i;
+        }
+    }
+    cout<<"\ndobry symbol:\n";
+    tab_hasz[temp_index].draw();
+    cout<<"\ncounter:"<<tab_hasz[temp_index].counter;
+    cout<<"\ntemp:"<<temp;
+}
+
+void mapa::draw_all_symbols(){
+
+    for(int i=0; i<hasz_size; i++){
+        cout<<"\n-"<<i<<"-\n";
+        tab_hasz[i].draw();
+        cout<<tab_hasz[i].counter;
+    }
+}
+
+
+
 /*
 
-1011000000
-1011000110
-1000000000
-1000000010
+0011000000
+0011000110
+0000000000
+0000000010
 0000000011
 1000000000
 0000010011
 0000111000
 0000000010
 1111111111
+
+
+0101010100
+0000000110
+0100010000
+0110011010
+0000000011
+1100000000
+0110010011
+0000011000
+1001010010
+1100000011
 */
