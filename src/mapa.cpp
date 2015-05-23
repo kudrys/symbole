@@ -75,6 +75,8 @@ int mapa::insert_hasz(int hasz){                      //zle wsadza do symbolu (z
     tab_hasz[hasz_size]= symbol(h.szerokosc, h.wysokosc);
     tab_hasz[hasz_size].hasz=hasz;
     hasz_size++;
+    h.draw_box_to_symbol(&tab_hasz[hasz_size-1]);
+
     return 1;   //zwraca 1 gdy znajdzie nowego hasza
 }
 
@@ -85,12 +87,14 @@ void mapa::extract_symbol(int ox,int oy){
     h.what_symbol_size();
 
     int hasz=h.hash_function();
-    cout<<"insert hasz:"<<insert_hasz(hasz)<<"\n";
+
+    cout<<"\ninsert hasz:"<<insert_hasz(hasz)<<"\n";
     cout<<"\nhasz_size:"<<hasz_size<<"\n";
 
-    h.draw_box_to_symbol(&tab_hasz[hasz_size-1]);
     cout<<"\n";
+
     tab_hasz[hasz_size-1].draw();
+
     cout<<"hasz:"<<h.hash_function();
     cout<<"\n";
     cout<<"counter:"<<tab_hasz[hasz_size-1].counter<<"\n";
@@ -132,7 +136,7 @@ void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
 0011000110
 0010000000
 0010000010
-0000000011
+0010000011
 1100000000
 0110010011
 0000111000
