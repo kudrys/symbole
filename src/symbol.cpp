@@ -15,9 +15,9 @@ symbol::~symbol(){
 
 char symbol::create_tab(int x,int y){
 
-    tab = new char* [x+2];
-    for (int i = 0; i < x+2; i++) {
-        tab[i] = new char [y+2];
+    tab = new char* [x+y+2];
+    for (int i = 0; i < x+y+2; i++) {
+        tab[i] = new char [x+y+2];
     }
 }
 

@@ -94,6 +94,7 @@ void mapa::extract_symbol(int ox,int oy){
     cout<<"\n";
 
     tab_hasz[hasz_size-1].draw();
+    h.draw_box_and_size();
 
     cout<<"hasz:"<<h.hash_function();
     cout<<"\n";
@@ -132,14 +133,14 @@ void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
 
 /*
 
-0011000100
-0011000110
-0010000000
-0010000010
-0010000011
-1100000000
-0110010011
+1011000000
+1011000110
+1000000000
+1000000010
+0000000011
+1000000000
+0000010011
 0000111000
-1001010010
-1100100011
+0000000010
+1111111111
 */

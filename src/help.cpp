@@ -40,6 +40,10 @@ void help::draw_box_to_symbol(symbol* s){
     int hy=highY-y+24;
     int lx=lowX-x+24;
     int ly=lowY-y+24;
+
+    cout<<"\ns.x:\n"<<s->x;
+    cout<<"\ns.y:\n"<<s->y;
+
     for(int i=0; i<=s->x; i++) {
         for(int j=0; j<=s->y; j++) {
         s->tab[i][j]=helptab[ly+i][lx+j];

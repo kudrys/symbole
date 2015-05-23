@@ -20,11 +20,5 @@ int main(){
 
     skarbow.flood(0,0);
     cout<<"\n";
-    //skarbow.draw();
-
-    //skarbow.h.draw();
-
-    cout<<"symbol:\n";
-    skarbow.tab_hasz[0].draw();
 }
 
