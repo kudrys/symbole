@@ -15,7 +15,7 @@ class help
         int lowX;
         int highY;
         int lowY;
-        char helptab[256][256];  //hx,lx,hy,ly  to wspolrzedne w help_tab
+        char helptab[300][300];  //hx,lx,hy,ly  to wspolrzedne w help_tab
 
         void set_default(int, int);
         void draw();

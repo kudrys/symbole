@@ -34,8 +34,8 @@ void mapa::load() {
 
 
 void mapa::load_helptab() {
-    for(int i=0; i<256;i++){
-        for(int j=0; j<256; j++) {
+    for(int i=0; i<300;i++){
+        for(int j=0; j<300; j++) {
             h.helptab[i][j]='0';
 
         }
