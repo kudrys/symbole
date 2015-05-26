@@ -29,12 +29,9 @@ void mapa::load() {
     char c[1000];
     for(int i=0; i<y; i++) {
             cin>> tab[i];
-//        for(int j=0; j<x; j++){
-//            tab[j][i]=c;
-//        }
-
     }
 }
+
 
 void mapa::load_helptab() {
     for(int i=0; i<256;i++){
@@ -88,21 +85,10 @@ void mapa::extract_symbol(int ox,int oy){
 
     int hasz=h.hash_function();
 
-    cout<<"\ninsert hasz:"<<insert_hasz(hasz)<<"\n";
-    cout<<"\nhasz_size:"<<hasz_size<<"\n";
-
-    cout<<"\n";
-
+    insert_hasz(hasz);
     //tab_hasz[hasz_size-1].draw();
-    //h.draw_box_and_size();
+    h.draw_box_and_size();
 
-    cout<<"hasz:"<<h.hash_function();
-    cout<<"\n";
-    cout<<"counter:"<<tab_hasz[hasz_size-1].counter<<"\n";
-
-    //draw();
-    //int b;
-    //cin>>b;
     h.clearr(127,127);
 }
 
@@ -140,10 +126,10 @@ void mapa::draw_the_biggest(){
             temp_index=i;
         }
     }
-    cout<<"\ndobry symbol:\n";
+    cout<<endl<<tab_hasz[temp_index].counter;
     tab_hasz[temp_index].draw();
-    cout<<"\ncounter:"<<tab_hasz[temp_index].counter;
-    cout<<"\ntemp:"<<temp;
+
+    //cout<<"\ntemp:"<<temp;
 }
 
 void mapa::draw_all_symbols(){

@@ -19,20 +19,20 @@ void help::draw() {
 }
 
 void help::draw_box_and_size(){
-    cout<<"\n----";
+    //cout<<"\n----";
     int hx=highX-x+127;
     int hy=highY-y+127;
     int lx=lowX-x+127;
     int ly=lowY-y+127;
     for(int i=ly; i<=hy; i++) {
-        cout<<"\n";
+       // cout<<"\n";
         for(int j=lx; j<=hx; j++) {
-            cout<<helptab[i][j];
+            //cout<<helptab[i][j];
         }
     }
-    cout<<"\n----\n";
+    //cout<<"\n----\n";
     what_symbol_size();
-    cout<<"size: "<<wysokosc<<","<<szerokosc;
+    //cout<<"size: "<<wysokosc<<","<<szerokosc;
 }
 
 void help::draw_box_to_symbol(symbol* s){
@@ -41,8 +41,8 @@ void help::draw_box_to_symbol(symbol* s){
     int lx=lowX-x+127;
     int ly=lowY-y+127;
 
-    cout<<"\ns.x:\n"<<s->x;
-    cout<<"\ns.y:\n"<<s->y;
+    //cout<<"\ns.x:\n"<<s->x;
+    //cout<<"\ns.y:\n"<<s->y;
 
     for(int i=0; i<=s->y; i++) {
         for(int j=0; j<=s->x; j++) {
@@ -60,7 +60,7 @@ void help::what_symbol_size()
 
     wysokosc=hy+1-ly;
     szerokosc=hx+1-lx;
-    cout<<"\nsize: "<<wysokosc<<","<<szerokosc;
+    //cout<<"\nsize: "<<wysokosc<<","<<szerokosc;
 }
 
 int help::hash_function(){

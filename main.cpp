@@ -1,5 +1,5 @@
 #include <iostream>
-#include <mapa.h>
+#include "mapa.h"
 using namespace std;
 
 int main(){
@@ -16,12 +16,12 @@ int main(){
 
     skarbow.load();   //wypelnia mape glowna
 
-    skarbow.draw();     //rysuje mape glowna
+    //skarbow.draw();     //rysuje mape glowna
 
     skarbow.flood(0,0);
     skarbow.flood(0,0);
 
-    skarbow.draw_all_symbols();
+    //skarbow.draw_all_symbols();
     skarbow.draw_the_biggest();
     cout<<"\n";
 
