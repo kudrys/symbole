@@ -61,6 +61,18 @@ void mapa::flood(int floodX,int floodY){
     }
 }
 
+void mapa::flood2(){
+
+    for(int i=0; i<y; i++){
+        for(int j=0; j<x; j++){//cout<<"\ni:"<<i<<" j:"<<j;
+            if(tab[i][j]=='1'){
+
+                extract_symbol(j,i);
+            }
+        }
+    }
+}
+
 int mapa::insert_hasz(int hasz){                      //zle wsadza do symbolu (zawsze rysuje 2 na 3). Jak tworzy sie tab_hasz to kazde 20 symboli ma rozmiar 3na3.
 
    for(int i=0;i<hasz_size;i++){
@@ -120,7 +132,7 @@ void mapa::one(int ox, int oy){ //przepisuje wszystko do helpa
 void mapa::draw_the_biggest(){
     int temp=0;
     int temp_index=0;
-    for(int i=1; i<hasz_size; i++){
+    for(int i=0; i<hasz_size; i++){
         if(tab_hasz[i].counter>temp){
             temp=tab_hasz[i].counter;
             temp_index=i;

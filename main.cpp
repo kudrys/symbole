@@ -18,10 +18,12 @@ int main(){
 
     //skarbow.draw();     //rysuje mape glowna
 
-    skarbow.flood(0,0);
-    skarbow.flood(0,0);
-
-    skarbow.draw_all_symbols();
+   // skarbow.flood(0,0);
+   // skarbow.flood(0,0);
+    skarbow.flood2();
+    //skarbow.flood2();
+    //skarbow.draw();
+    //skarbow.draw_all_symbols();
     skarbow.draw_the_biggest();
     cout<<"\n";
 

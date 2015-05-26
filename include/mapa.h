@@ -18,6 +18,7 @@ class mapa
         void load();
         void load_helptab();
         void flood(int,int);
+        void flood2();
         int insert_hasz(int);
         void extract_symbol(int,int);
         void one(int,int);
